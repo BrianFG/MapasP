@@ -1,0 +1,17 @@
+<form action="nse" method="post">
+<input type="checkbox" id="select_all"/>
+
+<%@generos.each do |g|%>
+<input type="checkbox" name="generos[]" value="<%=g.id%>"><%=g.nombre%></input><br>
+<%end%>
+<%@puntos.each do |p|%>
+<input type="hidden" name="puntos[]" value="<%=p%>">
+<%end%>
+
+<input type="submit" value="Filtrar">
+</form>
+
+<div id="map_canvas" ></div>
+
+<%= link_to "Ir a Final" , "/menus/fin"%>
+

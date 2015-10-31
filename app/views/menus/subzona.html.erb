@@ -1,0 +1,10 @@
+<form action="tipo" method="get">
+<input type="checkbox" id="select_all"/>
+
+<%@subzonas.each do |s|%>
+<input type="checkbox" name="subzonas[]" value="<%=s.id%>"><%=s.nombre%></input><br>
+<%end%>
+<input type="submit" value="Filtrar">
+</form>
+
+<div id="map_canvas" ></div>

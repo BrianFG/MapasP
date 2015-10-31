@@ -1,0 +1,11 @@
+<form action="edad" method="post">
+<input type="checkbox" id="select_all"/>
+
+<%@nses.each do |n|%>
+<input type="checkbox" name="nses[]" value="<%=n.id%>"><%=n.nombre%></input><br>
+<%end%>
+<%=raw hidden_values(@puntos,"puntos")%>
+<input type="submit" value="Filtrar">
+</form>
+
+<div id="map_canvas" ></div>

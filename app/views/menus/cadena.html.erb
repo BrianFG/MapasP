@@ -1,0 +1,12 @@
+<form action="genero" method="get">
+<input type="checkbox" id="select_all"/>
+
+<%@cadenas.each do |c|%>
+<input type="checkbox" name="cadenas[]" value="<%=c.id%>"><%=c.nombre%></input><br>
+<%end%>
+<input type="submit" value="Filtrar">
+</form>
+
+<div id="map_canvas" ></div>
+
+

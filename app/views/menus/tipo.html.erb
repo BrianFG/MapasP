@@ -1,0 +1,10 @@
+<form action="categoria" method="get">
+<input type="checkbox" id="select_all"/>
+
+<%@tipos.each do |t|%>
+<input type="checkbox" name="tipos[]" value="<%=t.id%>"><%=t.nombre%></input><br>
+<%end%>
+<input type="submit" value="Filtrar">
+</form>
+
+<div id="map_canvas" ></div>

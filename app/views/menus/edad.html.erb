@@ -1,0 +1,13 @@
+<form action="final_impactos" method="get">
+<input type="checkbox" id="select_all"/>
+
+<%@edades.each do |e|%>
+<input type="checkbox" name="edades[]" value="<%=e.id%>"><%=e.nombre%></input><br>
+<%end%>
+<%@puntos.each do |p|%>
+<input type="hidden" name="puntos[]" value="<%=p%>">
+<%end%>
+<input type="submit" value="Filtrar">
+</form>
+
+<div id="map_canvas" ></div>

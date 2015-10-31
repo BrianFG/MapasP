@@ -1,0 +1,15 @@
+<div class="row box">
+  <div class="col-sm-4">
+    <form action="zona" method="get">
+      <%=raw fancy_checkbox("select_all", "all", "none", "Todos", "primary") %>
+      <div id="selection">
+        <%=raw checkboxes(@estados, "estados")%>
+      </div>
+      <%= submit_tag "Filtrar", class: "btn btn-success"%>
+    </form>
+  </div>
+  <div class="col-sm-8">
+    <div id="map_canvas" ></div>
+  </div>
+</div>
+

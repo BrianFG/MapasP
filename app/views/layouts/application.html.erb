@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= "Menu " + params[:action].capitalize%></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag   "awesome-bootstrap-checkbox"  %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+	
+</script>
+
+<script type="text/javascript">
+  var puntos= <%=@puntos %>;
+
+</script>
+
+
+</head>
+<body>
+<div class="container">
+
+<%= yield %>
+
+</div>
+</body>
+</html>
